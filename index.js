@@ -26,6 +26,8 @@ module.exports = async (req, res) => {
     Examples
     - Vimeo       https://thumb.now.sh?url=https://vimeo.com/223149325
     - YouTube     https://thumb.now.sh?url=https://www.youtube.com/watch?v=SAWIo6Y4FoE
+
+    Demo          https://jsfiddle.net/stursby/heug415q/
     `
   }
 

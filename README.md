@@ -7,3 +7,4 @@
 - [ ] Request a size option (small, medium, large)
 - [ ] Add REST style routes too
 - [ ] Add more providers
+- [ ] Error handling (if thumbnail can’t be found)
