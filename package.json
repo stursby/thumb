@@ -1,0 +1,19 @@
+{
+  "name": "thumb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "micro",
+    "deploy": "now --public && now-realias"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "micro": "^7.3.3",
+    "micro-query": "^0.1.0"
+  },
+  "devDependencies": {
+    "now": "^7.1.0",
+    "now-realias": "^1.1.2"
+  }
+}
