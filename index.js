@@ -5,7 +5,7 @@ const { send } = require('micro')
 const { parse } = require('url')
 
 const VIMEO_API = 'https://vimeo.com/api/oembed.json?url='
-const YOUTUBE_API = 'http://www.youtube.com/oembed?url='
+const YOUTUBE_API = 'https://www.youtube.com/oembed?url='
 
 async function buildImage(url) {
   const { data } = await axios.get(url, { responseType: 'arraybuffer' })
