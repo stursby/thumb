@@ -31,21 +31,20 @@ module.exports = async (req, res) => {
 
   const { hostname } = parse(url)
   res.setHeader('Content-Type', 'image/png')
+  let thumb
 
   if (hostname.includes('vimeo')) {
     const { data } = await axios.get(`${VIMEO_API}${url}`)
-    const thumb = data.thumbnail_url.replace(/(_\d.+)/, '.jpg')
-    const image = await buildImage(thumb)
-    res.setHeader('Content-Length', image.length)
-    return send(res, 200, image)
+    thumb = data.thumbnail_url.replace(/(_\d.+)/, '.jpg')
   }
 
   if (hostname.includes('youtube')) {
     const { data } = await axios.get(`${YOUTUBE_API}${url}`)
     const filename = data.thumbnail_url.split('/').pop()
-    const thumb = data.thumbnail_url.replace(filename, 'maxresdefault.jpg')
-    const image = await buildImage(thumb)
-    res.setHeader('Content-Length', image.length)
-    return send(res, 200, image)
+    thumb = data.thumbnail_url.replace(filename, 'maxresdefault.jpg')
   }
+
+  const image = await buildImage(thumb)
+  res.setHeader('Content-Length', image.length)
+  return send(res, 200, image)
 }
