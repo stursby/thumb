@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thumb</title>
+  <style>
+
+  body {
+    max-width: 800px;
+    margin: 50px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  .logo {
+    max-width: 80px;
+    margin: 0 auto;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  section {
+    margin: 30px 0;
+  }
+
+  pre {
+    background: #ecf0f1;
+    padding: 10px;
+  }
+
+  code {
+    font-size: 14px;
+    margin: 4px;
+    background: #ecf0f1;
+    padding: 1px 3px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 109.2"><path d="M40 0C4.7 0 0 34.6 0 77.2c0 42.7 80 42.7 80 0C80 34.6 76.6 0 40 0zM8.8 53.7c0-20.4 7.8-40.6 31.2-40.6 25.4 0 31.2 20.1 31.2 40.6 0 20.4-62.4 20.4-62.4 0z"/></svg></div>
+    <h1>thumb</h1>
+    <p>Get thumbnail/poster images from Vimeo and YouTube</p>
+  </header>
+  <section>
+    <h3>Basic usage</h3>
+    <p>The easiest way to get started is to set the <code>src</code> of an <code>img</code> tag to <code>https://thumb.now.sh</code> + the URL of your video (as a query string).</p>
+    <pre>&lt;img src="https://thumb.now.sh<b>?url=https://youtube.com/watch?v=SAWIo6Y4FoE</b>"&gt;</pre>
+    <h4>Result</h4>
+    <img src="https://thumb.now.sh?url=https://youtube.com/watch?v=SAWIo6Y4FoE">
+  </section>
+</body>
+</html>
