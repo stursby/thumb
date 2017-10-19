@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "micro",
-    "deploy": "now --public && now-realias"
+    "deploy:now": "now --public && now-realias",
+    "deploy": "git push dokku master"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -16,5 +17,8 @@
   "devDependencies": {
     "now": "^7.1.0",
     "now-realias": "^1.1.2"
+  },
+  "engines": {
+    "node": "8.1.2"
   }
 }
